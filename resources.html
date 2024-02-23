@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>List of Available Resources</h2>
+    <ul>
+        {% for resource in resources %}
+            <li>{{ resource.name }} - {{ resource.email }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

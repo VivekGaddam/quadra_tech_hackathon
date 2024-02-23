@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Volunteer Sign Up</h2>
+    {% for message in get_flashed_messages() %}
+        <p class="flash">{{ message }}</p>
+    {% endfor %}
+    <form method="post">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name() }}
+        <br>
+        {{ form.email.label }} {{ form.email() }}
+        <br>
+        {{ form.submit() }}
+    </form>
+{% endblock %}
